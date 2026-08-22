@@ -16,7 +16,6 @@ const app = express();
 
 app.use(helmet());
 
-// Dynamic CORS allowing all localhost dev origins
 app.use(
   cors({
     origin: true,
@@ -42,7 +41,17 @@ app.use('/api/notifications', notificationRoutes);
 app.use('/api/users', userRoutes);
 
 app.get('/api/health', (_req, res) => {
-  res.status(200).json({ success: true, message: 'TaskPulse SaaS API active' });
+  res.status(200).json({ success: true, message: 'Team Task Manager SaaS API active' });
+});
+
+// Root landing page for backend API URL
+app.get('/', (_req, res) => {
+  res.status(200).json({
+    success: true,
+    message: '🚀 Team Task Manager SaaS REST API & Socket Server is active!',
+    healthCheck: '/api/health',
+    documentation: 'See README on GitHub repo for API endpoints',
+  });
 });
 
 app.use(errorHandler);
