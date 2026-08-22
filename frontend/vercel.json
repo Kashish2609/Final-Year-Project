@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://final-year-project-backend.onrender.com/api/:path*"
+    },
+    {
+      "source": "/:(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

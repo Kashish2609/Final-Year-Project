@@ -1,0 +1,26 @@
+export enum GlobalRole {
+  SUPER_ADMIN = 'SUPER_ADMIN',
+  USER = 'USER',
+}
+
+export enum ProjectRole {
+  OWNER = 'owner',
+  ADMIN = 'admin',
+  EDITOR = 'editor',
+  MEMBER = 'member',
+}
+
+export enum ProjectPermissionAction {
+  VIEW_PROJECT = 'VIEW_PROJECT',
+  EDIT_PROJECT = 'EDIT_PROJECT',
+  DELETE_PROJECT = 'DELETE_PROJECT',
+  MANAGE_MEMBERS = 'MANAGE_MEMBERS',
+  CHANGE_ROLES = 'CHANGE_ROLES',
+  CREATE_TASK = 'CREATE_TASK',
+  EDIT_TASK = 'EDIT_TASK',
+  DELETE_TASK = 'DELETE_TASK',
+  ASSIGN_TASK = 'ASSIGN_TASK',
+  CHANGE_TASK_STATUS = 'CHANGE_TASK_STATUS',
+  COMMENT = 'COMMENT',
+  VIEW_ANALYTICS = 'VIEW_ANALYTICS',
+}
